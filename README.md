@@ -2,7 +2,7 @@
 # JavaScript Password Generator
 
 The JavaScript password generator can be used to create unique passwords based on the criteria selected.
-You can choose to include symbols, numbers, lowercase letters, uppercase letters, or any combination thereof, as well as how many characters in length the password should be, giving you near infinite possibilities!
+You can choose to include special characters, numbers, lowercase letters, uppercase letters, or any combination thereof. The password can be anywhere from 8 to 128 characters long, too, giving you near infinite possibilities!
 
 ## Project Requirements
 **User Story**  
@@ -20,15 +20,7 @@ You can choose to include symbols, numbers, lowercase letters, uppercase letters
 > WHEN all prompts are answered, a password is generated that matches the selected criteria.  
 > WHEN the password is generated, the password is either displayed in an alert or written to the page.
 
-## Screenshots
-
-![App Screenshot](./assets/images/screenshot.jpg)
-
-
 ## Demo
 
+![JS Password Generator demo](./assets/demo-video.gif)
 https://devbritt.github.io/js-password-generator/
-## Lessons Learned
-
-What did you learn while building this project? What challenges did you face and how did you overcome them?
-

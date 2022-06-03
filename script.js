@@ -20,18 +20,36 @@ function getPasswordLength() {
 
 // prompt user to confirm use of character types and return object with charTypeName: boolean attributes
 function getCharTypes() {
+    // function for confirm prompts
+    function confirmTypes() {
+        // confirm lowercase, add choice to object
+        charTypes.confirmLower = confirm("Would you like to include lowercase letters in your password? Click 'OK' for yes, 'Cancel' for no.");
+        // confirm uppercase, add choice to object
+        charTypes.confirmUpper = confirm("Would you like to include uppercase letters in your password? Click 'OK' for yes, 'Cancel' for no.");
+        // confirm numeric, add choice to object
+        charTypes.confirmNums = confirm("Would you like to include numbers in your password? Click 'OK' for yes, 'Cancel' for no.");
+        // confirm special, add choice to object
+        charTypes.confirmSpecials = confirm("Would you like to include special characters in your password? Click 'OK' for yes, 'Cancel' for no.");
+    }
+
     // charTypes object
+    var charTypes = {
+        confirmLower: false,
+        confirmUpper: false,
+        confirmNums: false,
+        confirmSpecials: false
+    }
 
-    // confirm lowercase, add choice to object
-
-    // confirm uppercase, add choice to object
-
-    // confirm numeric, add choice to object
-
-    // confirm special, add choice to object
+    confirmTypes();
+    
+    // prompt user for at least one character type
+    while (!charTypes.confirmLower && !charTypes.confirmUpper && !charTypes.confirmNums && !charTypes.confirmSpecials) {
+        alert("Make sure to include AT LEAST one type of character for your password!");
+        confirmTypes();
+    }
 
     // return charTypes
-    return;
+    return charTypes;
 }
 
 // TODO: create generatePassword function
